@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-9">
+  <p id="notice"><%= notice %></p>
+    <div class="title">
+      <h2><%= @post.title %></h2>
+    </div>
+    <div class="content">
+      <p><%= @post.content %></p>
+    </div>
+  </div><!-- end of 9 row -->
+  <div class="col-md-3">
+      <div class="side contact">
+        <h4>CONTACT</h4>
+        <p>Email us at hello@gmail.com</p>
+        <p>Call or text us at 099999999</p>
+      </div>
+      <div class="side subscribe">
+        <h4>SUBSCRIBE</h4>
+          <%= image_tag 'fb.png', :class => 'image' %>
+          <%= image_tag 'twitter.png' , :class => 'image' %>
+          <%= image_tag 'google.png' , :class => 'image' %>
+      </div>
+      <div class="side search">
+        <h4>SEARCH</h4>
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control">
+            <button type="submit" class="btn btn-default">Search</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- end of 3 row-->
+</div>
+
+<div class="row">
+  <div class="col-md-9">
+    <ul class="list-inline">
+      <li><% if can? :update, @post %><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-success' %><% end %></li>
+      <li><%= link_to 'Back', posts_path, :class => 'btn btn-info' %></li>
+    </ul>
+  </div><!-- end of 9 row -->
+</div>

@@ -1,0 +1,10 @@
+<% if can? :update, @post %>
+<h1>Editing post</h1>
+
+<%= render 'form' %>
+
+<ul class="list-inline">
+  <li><%= link_to 'Show', @post, :class => 'btn btn-info' %></li>
+  <li><%= link_to 'Back', posts_path, :class => 'btn btn-success' %></li>
+</ul>
+<% end %>

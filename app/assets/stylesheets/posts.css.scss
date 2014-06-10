@@ -1,0 +1,24 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$black: #000;
+
+.title{
+  border-top: 5px solid $black;
+  margin: 0 0 2% 0;
+}
+.content{
+  text-align: justify;
+}
+.side-bar{
+  position:fixed;
+}
+.side{
+  @extend .title;
+}
+.side .image{
+  width:20%;
+  margin:0 2% 0 8%;
+  display:inline;
+}
